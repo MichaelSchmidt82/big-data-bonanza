@@ -12,6 +12,7 @@ Some are subject to upgrades
 - Containers: Docker 24.0.2
 - Orchestrator: Kubernetes
 - Database: MongoDB 6.1, Scala driver 4.8
+
 Prototyping uses Minikube 1.30.1
 
 ### Cluster & Hardware
