@@ -1,4 +1,4 @@
-# spark-recompressor
+# spark-demo
 A demo platform using:
 
 ### Platform, components, versions
