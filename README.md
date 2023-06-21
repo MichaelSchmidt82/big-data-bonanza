@@ -3,7 +3,7 @@ A demo platform that decompresses data in various formats and recompresses them 
 
 ### State of the Project
 - Spark Driver:
-  - Build, package, and execute a hello world within a docker container using SBT
+  - Build, package, and execute a hello world app within a docker container using SBT
     
 - Spark Workers:
   - A SMB client worker that can login, read, and filter out (annoying) metadata macOS files.
