@@ -39,7 +39,7 @@ Some are subject to upgrades
 - PC: 64gb memory, 6c/12t
 - A recent MacBookPro
 - An older MacBookPro
-- 1gbit WAN / 2.5gbit LAN / (550mbit) typical WLAN
+- 1gbit WAN / 2.5gbit LAN / 600mbit (typical) WLAN
 
 
 ### Current findings:
