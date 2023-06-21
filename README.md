@@ -6,7 +6,7 @@ A demo platform that decompresses data in various formats and recompresses them 
   - Build, package, and execute a hello world app within a docker container using SBT
     
 - Spark Workers:
-  - A SMB client worker that can login, read, and filter out (annoying) metadata macOS files.
+  - An SMB client worker that can login, read, and filter out (annoying) metadata macOS files.
  
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
