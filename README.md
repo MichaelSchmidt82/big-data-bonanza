@@ -1,5 +1,5 @@
 # spark-demo
-A demo platform that decompresses data in various formats and recompresses them into a sing compressed format
+A demo platform that decompresses data in various formats and recompresses them into a single compressed (Bzip2) format.
 
 ### State of the Project
 - Spark Driver, a hello world that
