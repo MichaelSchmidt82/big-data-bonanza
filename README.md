@@ -2,9 +2,8 @@
 A demo platform that decompresses data in various formats and recompresses them into a single compressed (Bzip2) format.
 
 ### State of the Project
-- Spark Driver, a hello world that
-  - Builds and packages using SBT
-  - executes a JAR within a docker container
+- Spark Driver:
+  - Build, package, and execute a hello world within a docker container using SBT
     
 - Spark Workers:
   - A SMB client worker that can login, read, and filter out (annoying) metadata macOS files.
