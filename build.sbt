@@ -18,3 +18,5 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % SparkVersion
 )
 
+libraryDependencies += "com.hierynomus" % "smbj" % "0.11.5"
+
