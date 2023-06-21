@@ -46,4 +46,4 @@ Some are subject to upgrades
 
 - JVM option needs `--add-exports java.base/sun.nio.ch=ALL-UNNAMED` in Build configurations.  See [here](https://stackoverflow.com/questions/73465937/apache-spark-3-3-0-breaks-on-java-17-with-cannot-access-class-sun-nio-ch-direct)
 
-- SBT needs `fork := true` or `fork / run := true
+- SBT needs `fork := true` or `fork / run := true` for the app to run in it's own thread (not in the SBT build thread).
