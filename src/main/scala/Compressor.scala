@@ -7,12 +7,12 @@ class Compressor(val Filename: String, val Data: Array[Byte]) {
     val FileStream: FileOutputStream = new FileOutputStream(Filename)
     val BufferedStream: BufferedOutputStream = new BufferedOutputStream(FileStream)
 
-    val CompApp = new CompressorStreamFactory()
+    val Bzip2Compressor = new CompressorStreamFactory()
       .createCompressorOutputStream(CompressorStreamFactory.BZIP2, BufferedStream)
 
-    CompApp.write(Data)
+    Bzip2Compressor.write(Data)
 
     BufferedStream.close()
-    CompApp.close()
+    Bzip2Compressor.close()
   }
 }
