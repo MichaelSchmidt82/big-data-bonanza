@@ -7,6 +7,7 @@ A demo platform that decompresses data in various formats and recompresses them 
     
 - Spark Workers:
   - An SMB client worker that can login, read, and filter out (annoying) metadata macOS files.
+  - A Compressor class that accepts a path, filename, and data which writes a Bzip2 file as specified
  
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
