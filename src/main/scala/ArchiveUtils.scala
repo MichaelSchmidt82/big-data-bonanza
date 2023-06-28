@@ -65,3 +65,5 @@ class BZip2 extends App with Archive {
   val f: File = new File("some_bz2_for_you.bz2")
   decompress(f, "path/")
 }
+
+object BZip2 {}
