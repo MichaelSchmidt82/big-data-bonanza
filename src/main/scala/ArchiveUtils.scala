@@ -1,8 +1,5 @@
 import org.apache.commons.compress.compressors.bzip2.{BZip2CompressorInputStream, BZip2CompressorOutputStream}
-
 import java.io.{BufferedInputStream, File, FileInputStream, FileOutputStream, InputStream}
-
-
 
 trait Archive {
 
@@ -37,8 +34,7 @@ trait Archive {
 }
 
 
-
-object BZip2 extends App with Archive {
+class BZip2 extends App with Archive {
 
   def decompress(compressedFile: File, outputPath: String): Unit = {
 
@@ -48,7 +44,6 @@ object BZip2 extends App with Archive {
     val bzip2InputStream = new BZip2CompressorInputStream(buffedFileIn)
 
     val buffer = new Array[Byte](4096)
-
     var entryName = 1
     var bytesRead = 0
 
