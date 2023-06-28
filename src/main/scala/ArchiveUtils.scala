@@ -35,7 +35,7 @@ trait Archive {
 }
 
 
-class BZip2 extends App with Archive {
+class BZip2File extends App with Archive {
 
   def decompress(compressedFile: File, outputPath: String): Unit = {
 
@@ -67,4 +67,8 @@ class BZip2 extends App with Archive {
   decompress(f, "path/")
 }
 
-object BZip2 {}
+class ZipFile extends Archive {
+
+  override def decompress(compressedFile: File, outputPath: String): Unit = ???
+
+}
