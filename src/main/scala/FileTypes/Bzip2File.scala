@@ -1,6 +1,8 @@
+package FileTypes
+
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream
 
-import java.io.{BufferedInputStream, File, FileInputStream, FileOutputStream, InputStream}
+import java.io._
 
 class Bzip2File(path: String) extends Archive {
 
