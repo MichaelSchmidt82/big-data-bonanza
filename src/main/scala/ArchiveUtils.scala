@@ -31,6 +31,15 @@ trait Archive {
   }
 
   def decompress(compressedFile: File, outputPath: String): Unit
+  def integrationTest(files: Seq[File], testPath: String): Unit = {
+    //val fileName: String = "test_package"
+    //this.compress(files: Seq[File], testPath)
+
+    //val compressedFile: FileOutputStream = new FileOutputStream("test_path")
+
+    //this.decompress(compressedFile: File, testPath: String)
+
+  }
 }
 
 
