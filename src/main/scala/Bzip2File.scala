@@ -4,7 +4,7 @@ import java.io.{BufferedInputStream, File, FileInputStream, FileOutputStream, In
 
 class Bzip2File(path: String) extends Archive {
 
-  def decompress(path: String): Unit = {
+  def decompress(): Unit = {
 
     // Input Streams
     val file: File = new File(path)
