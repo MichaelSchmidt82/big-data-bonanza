@@ -6,12 +6,17 @@ A demo platform that decompresses data in various formats and recompresses them 
   - Build, package, and execute a hello world app within a docker container using SBT
     
 - Spark Workers:
-  - An SMB client worker that can login, read, and filter out (annoying) metadata macOS files.
-  - A Compressor class that accepts a path, filename, and data which writes a Bzip2 file as specified
+  - An SMB client worker that can login, determine share contents, and filter out annoying macOS metadata files.
+  - File type classes that represent archive properties.
+    - `trait Archive` enforces methods `compress()` and `decompress()` declared.
+     - The default the `compress()` method is Bzip2, (the target compression).  Should the target format change, it would mean updating the trait, not each and every filetype.     
+    - Bzip2 files can `compress()` and `decompress()`
+    - Zip files can `decompress()` fulfilling one filetype found
+    - Skeleton code for 7Zip `decompress()`.
+    - **Bonus Points:** All compress/decompress methods use **TAIL-END RECURSION**. [see why this matters](https://www.baeldung.com/cs/tail-vs-non-tail-recursion).
  
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
-
 
 ### The Data
 - 557.3gb in 8083 files (Disc images)
