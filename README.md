@@ -24,7 +24,7 @@ A demo platform that decompresses data in various formats and recompresses them 
 - 7.8gb in 500 files (fixed sizes 16m, 32m, etc.), and they too are in compressed formats.
 - 1.9gb of a mysterous single compressed file (7zip).  I dunno, maybe somethings goofy and has compressed files in iteself.
 
-__All files are in varios formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed. 
+__All files are in various formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed. 
 
 ### Platform, components, versions
 Some are subject to upgrades
