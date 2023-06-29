@@ -11,9 +11,9 @@ A demo platform that decompresses data in various formats and recompresses them 
     - `trait Archive` enforces methods `compress()` and `decompress()` declared.
      - The default the `compress()` method is Bzip2, (the target compression).  Should the target format change, it would mean updating the trait, not each and every filetype.     
     - Bzip2 files can `compress()` and `decompress()`
-    - Zip files can `decompress()` fulfilling one filetype found
+    - Zip files can `decompress()` fulfilling one filetype found.
     - Skeleton code for 7Zip `decompress()`.
-    - **Bonus Points:** All compress/decompress methods use **TAIL-END RECURSION**. [see why this matters](https://www.baeldung.com/cs/tail-vs-non-tail-recursion).
+    - **Bonus Points:** All compress/decompress methods use **TAIL-END RECURSION**. [see why this matters].(https://www.baeldung.com/cs/tail-vs-non-tail-recursion).
  
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
