@@ -1,17 +1,54 @@
 package Filetypes
 
-import java.io.File
+import org.apache.commons.compress.archivers.zip.{ZipArchiveEntry, ZipArchiveInputStream}
 
-class ZipFile(val path: String) extends Archive {
+import java.io.{File, FileInputStream, FileOutputStream}
+import scala.annotation.tailrec
+import scala.collection.mutable.ListBuffer
 
-    def decompress(): List[File] = {
+class ZipFile(val zipFilePath: String) extends Archive {
 
+  def decompress(): List[File] = {
+    val zipFile = new File(zipFilePath)
+    val decompressedFiles = ListBuffer.empty[File]
 
-      val someFile: File = new File(path)
+    val zipFileInputStream = new FileInputStream(zipFile)
+    val zipInputStream = new ZipArchiveInputStream(zipFileInputStream)
 
-      println("decompress")
+    @tailrec
+    def extractEntry(entry: ZipArchiveEntry): Unit = {
+      if (entry != null) {
+        val outputFilePath = new File(entry.getName)
 
-      val payload: List[File] = List(someFile)
-      payload
+        if (entry.isDirectory) {
+          outputFilePath.mkdirs()
+        } else {
+          val outputFile = new FileOutputStream(outputFilePath)
+
+          @tailrec
+          def writeBytes(buffer: Array[Byte], bytesRead: Int): Unit = {
+            if (bytesRead != -1) {
+              outputFile.write(buffer, 0, bytesRead)
+              writeBytes(buffer, zipInputStream.read(buffer))
+            }
+          }
+
+          val buffer = new Array[Byte](4096)
+          writeBytes(buffer, zipInputStream.read(buffer))
+          outputFile.close()
+          decompressedFiles += outputFilePath
+        }
+
+        extractEntry(zipInputStream.getNextZipEntry)
+      }
     }
+
+    extractEntry(zipInputStream.getNextZipEntry)
+
+    zipInputStream.close()
+    zipFileInputStream.close()
+
+    decompressedFiles.toList
+  }
+
 }
