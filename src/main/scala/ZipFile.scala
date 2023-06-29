@@ -1,17 +1,15 @@
-package FileTypes
-
 import java.io.File
 
 class ZipFile(val path: String) extends Archive {
 
-    def decompress(): Seq[File] = {
+    def decompress(): List[File] = {
 
 
       val someFile: File = new File(path)
 
       println("decompress")
 
-      val payload: Seq[File] = Seq(someFile)
+      val payload: List[File] = List(someFile)
       payload
     }
 }
