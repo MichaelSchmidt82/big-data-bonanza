@@ -4,15 +4,18 @@ import org.apache.commons.compress.compressors.bzip2.{BZip2CompressorInputStream
 
 import java.io._
 import scala.annotation.tailrec
+import scala.collection.mutable.ListBuffer
 
-class BZipTwoFile(val inputFilePath: String) extends Archive {
+class BZipTwoFile(val bziptwoFilePath: String) extends Archive {
 
   def decompress(): List[File] = {
-    val inputFile = new File(inputFilePath)
-    val inputStream = new FileInputStream(inputFile)
+    val bZipTwoFile = new File(bziptwoFilePath)
+    val decompressedFiles = ListBuffer.empty[File]
 
-    val bzip2InputStream = new BZip2CompressorInputStream(inputStream)
-    val tarInputStream = new TarArchiveInputStream(bzip2InputStream)
+    val bZipTwoFileInputStream = new FileInputStream(bZipTwoFile)
+
+    val bZipTwoInputStream = new BZip2CompressorInputStream(bZipTwoFileInputStream)
+    val tarInputStream = new TarArchiveInputStream(bZipTwoInputStream)
 
     @tailrec
     def decompressEntry(entry: Option[TarArchiveEntry], files: List[File]): List[File] = entry match {
@@ -30,20 +33,19 @@ class BZipTwoFile(val inputFilePath: String) extends Archive {
 
         val buffer = new Array[Byte](4096)
         writeBytes(buffer, tarInputStream.read(buffer))
-
         outputFile.close()
 
         decompressEntry(Option(tarInputStream.getNextTarEntry), outputFilePath :: files)
 
       case None =>
         tarInputStream.close()
-        bzip2InputStream.close()
+        bZipTwoInputStream.close()
         files
     }
 
-    val decompressedFiles = decompressEntry(Option(tarInputStream.getNextTarEntry), Nil).reverse
+    decompressEntry(Option(tarInputStream.getNextTarEntry), Nil).reverse
 
-    decompressedFiles.toSeq
+    decompressedFiles.toList
   }
 
   // Default to BZip2 Format
@@ -87,7 +89,7 @@ class BZipTwoFile(val inputFilePath: String) extends Archive {
   }
 
   def compress(): File = {
-    new File(inputFilePath)
+    new File(bziptwoFilePath)
   }
 
   def compress(zipFile: ZipFile): File = {
