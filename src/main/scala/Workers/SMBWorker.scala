@@ -1,7 +1,9 @@
-import com.hierynomus.msfscc.fileinformation.FileIdBothDirectoryInformation
-import com.hierynomus.smbj.auth.AuthenticationContext
+package Workers
+
 import com.hierynomus.smbj.SMBClient
+import com.hierynomus.smbj.auth.AuthenticationContext
 import com.hierynomus.smbj.share.DiskShare
+
 import scala.collection.convert.ImplicitConversions.`iterable AsScalaIterable`
 
 object SMBWorker {
