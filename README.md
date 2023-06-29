@@ -20,9 +20,9 @@ A demo platform that decompresses data in various formats and recompresses them 
 
 ### The Data
 - 557.3gb in 8083 files (Disc images)
-- 4.3gb in 926 files (fixed sizes 8k, 16k, etc.)
-- 7.8gb in 500 files (fixed sizes 16m, 32m, etc.)
-- 1.9gb of a mysterous single compressed file (7zip)
+- 4.3gb in 926 files (fixed sizes 8k, 16k, etc.), and they are compressed
+- 7.8gb in 500 files (fixed sizes 16m, 32m, etc.), and they too are also compressed
+- 1.9gb of a mysterous single compressed file (7zip).  I dunno, maybe somethings goofy and has compressed files it iteself!
 
 __All files are in varios formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed. 
 
