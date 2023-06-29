@@ -1,3 +1,4 @@
+import Filetypes.ZipFile
 import org.apache.spark.{SparkConf, SparkContext}
 
 import java.io.File
@@ -12,11 +13,8 @@ object Main extends App {
 
 object Foo extends App {
 
-  val path: String = "some_path"
-
-  val zurpFile: ZipFile = new ZipFile(path)
-  val fyle: File = new File(path)
-
-  val bar = Bzip2File.apply(zurpFile)
-  val baz = Bzip2File.apply(fyle)
+  val p: String = "foo"
+  val z: ZipFile = new ZipFile(p)
+  val b: BZipTwoFile = new BZipTwoFile(z.path)
+  val f: File = b.compress()
 }

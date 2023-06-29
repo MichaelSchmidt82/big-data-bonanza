@@ -1,3 +1,5 @@
+package Filetypes
+
 import java.io.File
 
 trait Archive {

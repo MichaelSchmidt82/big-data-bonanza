@@ -1,10 +1,11 @@
+import Filetypes.{Archive, ZipFile}
 import org.apache.commons.compress.archivers.tar.{TarArchiveEntry, TarArchiveInputStream}
 import org.apache.commons.compress.compressors.bzip2.{BZip2CompressorInputStream, BZip2CompressorOutputStream}
 
 import java.io._
 import scala.annotation.tailrec
 
-class Bzip2File(val inputFilePath: String) extends Archive {
+class BZipTwoFile(val inputFilePath: String) extends Archive {
 
   def decompress(): List[File] = {
     val inputFile = new File(inputFilePath)
@@ -98,9 +99,9 @@ class Bzip2File(val inputFilePath: String) extends Archive {
   //new File("foo")
 }
 
-object Bzip2File {
+object BZipTwoFile {
 
-  def apply(zipFile: ZipFile): Bzip2File = new Bzip2File(zipFile.path)
+  def apply(zipFile: ZipFile): BZipTwoFile = new BZipTwoFile(zipFile.path)
 
-  def apply(file: File): Bzip2File = new Bzip2File(file.getPath)
+  def apply(file: File): BZipTwoFile = new BZipTwoFile(file.getPath)
 }
