@@ -4,14 +4,14 @@ A demo platform that decompresses data in various formats and recompresses them 
 ### Platform, components, versions
 Some are subject to change and upgrades.
 
-- OS: Ubuntu 22.04, macOS 13
-- Language: Scala 2.13.11
-- Build tool: SBT 1.8.3
-- Java JDK: openjdk 11.0.19 2023-04-18
+- Orchestrator: Kubernetes
 - Platform: Apache Spark 3.4.0
 - Containers: Docker 24.0.2
-- Orchestrator: Kubernetes
+- Language: Scala 2.13.11
 - Database: MongoDB 6.1, Scala driver 4.8 (not yet though)
+- Java JDK: openjdk 11.0.19 2023-04-18
+- OS: Ubuntu 22.04, macOS 13
+- Build tool: SBT 1.8.3
 
 ### State of the Project
 - Spark Driver:
