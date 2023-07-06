@@ -40,7 +40,7 @@ Some are subject to upgrades
 
 
 ### Cluster & Hardware
-- ODroid H3+ with 64gb RAM, 14TB space
+- [ODroid H3+](https://www.hardkernel.com/shop/odroid-h3-plus/) with 64gb RAM, 14TB space
 - RaspberryPi 4b
 - PC: 64gb memory, 6c/12t
 - A recent MacBookPro
