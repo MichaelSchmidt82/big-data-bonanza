@@ -13,7 +13,7 @@ A demo platform that decompresses data in various formats and recompresses them 
     - Bzip2 files can `compress()` and `decompress()`
     - Zip files can `decompress()` fulfilling one filetype found.
     - Skeleton code for 7Zip `decompress()`.
-    - **Bonus Points:** All compress/decompress methods use **TAIL-END RECURSION**. [see why this matters](https://www.baeldung.com/cs/tail-vs-non-tail-recursion).
+    - **Bonus Points:** All compress/decompress methods use **TAIL-END RECURSION**. [See why this matters](https://www.baeldung.com/cs/tail-vs-non-tail-recursion).
  
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
