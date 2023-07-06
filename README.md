@@ -1,4 +1,4 @@
-# spark-demo
+# Big Data Bonanza
 A demo platform that decompresses data in various formats and recompresses them into a single compressed (Bzip2) format.
 
 ### State of the Project
