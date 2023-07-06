@@ -1,5 +1,5 @@
 # Big Data Bonanza
-A demo platform that decompresses data in various formats and recompresses them into a single compressed (Bzip2) format.
+A demo platform that decompresses data in various formats and recompresses them into a single compressed (Bzip2) format.  The mixed format dataset is 571 GB.
 
 ### State of the Project
 - Spark Driver:
