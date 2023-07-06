@@ -1,6 +1,18 @@
 # Big Data Bonanza
 A demo platform that decompresses data in various formats and recompresses them into a single compressed (Bzip2) format.  The mixed format dataset is 571 GB.
 
+### Platform, components, versions
+Some are subject to change and upgrades.
+
+- OS: Ubuntu 22.04, macOS 13
+- Language: Scala 2.13.11
+- Build tool: SBT 1.8.3
+- Java JDK: openjdk 11.0.19 2023-04-18
+- Platform: Apache Spark 3.4.0
+- Containers: Docker 24.0.2
+- Orchestrator: Kubernetes
+- Database: MongoDB 6.1, Scala driver 4.8 (not yet though)
+
 ### State of the Project
 - Spark Driver:
   - Build, package, and execute a hello world app within a docker container using SBT
@@ -25,18 +37,6 @@ A demo platform that decompresses data in various formats and recompresses them 
 - 1.9gb of a mysterous single compressed file (7zip).  I dunno, maybe somethings goofy and has compressed files in iteself.
 
 __All files are in various formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed. 
-
-### Platform, components, versions
-Some are subject to upgrades
-
-- OS: Ubuntu 22.04, macOS 13
-- Language: Scala 2.13.11
-- Build tool: SBT 1.8.3
-- Java JDK: openjdk 11.0.19 2023-04-18
-- Platform: Apache Spark 3.4.0
-- Containers: Docker 24.0.2
-- Orchestrator: Kubernetes
-- Database: MongoDB 6.1, Scala driver 4.8 (not yet though)
 
 
 ### Cluster & Hardware
