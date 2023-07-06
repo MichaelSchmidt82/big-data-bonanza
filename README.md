@@ -36,7 +36,7 @@ Some are subject to upgrades
 - Platform: Apache Spark 3.4.0
 - Containers: Docker 24.0.2
 - Orchestrator: Kubernetes
-- Database: MongoDB 6.1, Scala driver 4.8
+- Database: MongoDB 6.1, Scala driver 4.8 (not yet though)
 
 
 ### Cluster & Hardware
