@@ -13,6 +13,14 @@ Some are subject to change and upgrades.
 - 💻 OS: Ubuntu 22.04, macOS 13
 - 👷 Build tool: SBT 1.8.3
 
+### The Data
+- 557.3gb in 8083 files (Disc images)
+- 4.3gb in 926 files (fixed sizes 8k, 16k, etc.), and they are in compressed formats.
+- 7.8gb in 500 files (fixed sizes 16m, 32m, etc.), and they too are in compressed formats.
+- 1.9gb of a mysterous single compressed file (7zip).  I dunno, maybe somethings goofy and has compressed files in iteself.
+
+__All files are in various formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed. 
+
 ### State of the Project
 - Spark Driver:
   - Build, package, and execute a hello world app within a docker container using SBT
@@ -29,15 +37,6 @@ Some are subject to change and upgrades.
  
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
-
-### The Data
-- 557.3gb in 8083 files (Disc images)
-- 4.3gb in 926 files (fixed sizes 8k, 16k, etc.), and they are in compressed formats.
-- 7.8gb in 500 files (fixed sizes 16m, 32m, etc.), and they too are in compressed formats.
-- 1.9gb of a mysterous single compressed file (7zip).  I dunno, maybe somethings goofy and has compressed files in iteself.
-
-__All files are in various formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed. 
-
 
 ### Cluster & Hardware
 - [ODroid H3+](https://www.hardkernel.com/shop/odroid-h3-plus/) with 64gb RAM, 14TB space
