@@ -6,10 +6,10 @@ import java.io.{File, FileInputStream, FileOutputStream}
 import scala.annotation.tailrec
 import scala.collection.mutable.ListBuffer
 
-class ZipFile(val zipFilePath: String) extends Archive {
+class ZipFile(val path: String) extends Archive {
 
   def decompress(): List[File] = {
-    val zipFile = new File(zipFilePath)
+    val zipFile = new File(path)
     val decompressedFiles = ListBuffer.empty[File]
 
     val zipFileInputStream = new FileInputStream(zipFile)
