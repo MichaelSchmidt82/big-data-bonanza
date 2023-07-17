@@ -32,11 +32,14 @@ __All files are in various formats:__ ISO, zip, gzip, LZMA, RAR, uncompressed.
      - The default the `compress()` method is Bzip2, (the target compression).  Should the target format change, it would mean updating the trait, not each and every filetype.     
     - Bzip2 files can `compress()` and `decompress()`
     - Zip files can `decompress()` fulfilling one filetype found.
-    - Skeleton code for 7Zip `decompress()`.
+    - 7Zip `decompress()`.
     - **Bonus Points:** All compress/decompress methods use **TAIL-END RECURSION**. [See why this matters](https://www.baeldung.com/cs/tail-vs-non-tail-recursion).
- 
+
+  Next up: test archive file extractions
 - Kubernetes
   - Created a Deployment which execute the spark hello world app in a single node.
+
+
 
 ### Cluster & Hardware
 - [ODroid H3+](https://www.hardkernel.com/shop/odroid-h3-plus/) with 64gb RAM, 14TB space
