@@ -2,7 +2,7 @@ package Filetypes
 
 import java.io.File
 
-trait Archive extends File {
+trait Archive {
 
   def decompress(): List[File]
 

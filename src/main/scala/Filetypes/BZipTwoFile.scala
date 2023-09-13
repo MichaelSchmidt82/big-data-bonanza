@@ -54,13 +54,20 @@ class BZipTwoFile(val bziptwoFilePath: String) extends Archive {
     val outputStream = new FileOutputStream(outputFile)
     val bzip2OutputStream = new BZip2CompressorOutputStream(outputStream)
 
+    for f <- files {
+
+      println("foo")
+    }
+
+
+  }
+
   def compress(path: String): File = {
     new File(path)
   }
 
   def compress(): File = {
     new File(bziptwoFilePath)
-  }
 
   def compress(zipFile: ZipFile): File = {
     val files: List[File] = zipFile.decompress()

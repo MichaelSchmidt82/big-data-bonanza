@@ -29,5 +29,6 @@ object SMBWorker {
     println(f.getFileName)
   }
 
-  def upload(compressedFile: Archive):
+  def upload(compressedFile: Archive): Unit = {}
+
 }
