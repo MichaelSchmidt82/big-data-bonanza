@@ -1,4 +1,4 @@
-import Filetypes.{Archive, ZipFile}
+import Filetypes.{Archive, SevenZipFile, ZipFile}
 import org.apache.commons.compress.archivers.tar.{TarArchiveEntry, TarArchiveInputStream}
 import org.apache.commons.compress.compressors.bzip2.{BZip2CompressorInputStream, BZip2CompressorOutputStream}
 
@@ -48,11 +48,28 @@ class BZipTwoFile(val bziptwoFilePath: String) extends Archive {
     decompressedFiles.toList
   }
 
-  // Default to BZip2 Format
+  // Default to BZip2 Format, TODO Tail end recursion
   def compress(files: List[File], outputPath: String): File = {
     val outputFile = new File(outputPath)
     val outputStream = new FileOutputStream(outputFile)
     val bzip2OutputStream = new BZip2CompressorOutputStream(outputStream)
+
+  def compress(path: String): File = {
+    new File(path)
+  }
+
+  def compress(): File = {
+    new File(bziptwoFilePath)
+  }
+
+  def compress(zipFile: ZipFile): File = {
+    val files: List[File] = zipFile.decompress()
+    this.compress(files, zipFile.path)
+  }
+
+//  def compress(sevenZip: SevenZipFile) = {
+//    val files: List[File] = sevenZip
+//  }
 
     @tailrec
     def compressFiles(fileList: List[File]): Unit = fileList match {
@@ -79,23 +96,13 @@ class BZipTwoFile(val bziptwoFilePath: String) extends Archive {
 
         compressFiles(remainingFiles)
     }
-
     compressFiles(files.toList)
     outputFile
   }
 
-  def compress(path: String): File = {
-    new File(path)
-  }
 
-  def compress(): File = {
-    new File(bziptwoFilePath)
-  }
 
-  def compress(zipFile: ZipFile): File = {
-    val files: List[File] = zipFile.decompress()
-    this.compress(files, zipFile.path)
-  }
+
 
   //def compress(sevenZip: SevenZip): File = {
   //new File("foo")

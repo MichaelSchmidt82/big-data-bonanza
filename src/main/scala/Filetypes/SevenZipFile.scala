@@ -9,7 +9,7 @@ import java.io.{File, FileInputStream, FileOutputStream}
 import scala.annotation.tailrec
 import scala.collection.mutable.ListBuffer
 
-class SevenZip(val path: String) extends App {
+class SevenZipFile(val path: String) extends App {
 
   def decompress(): List[File] = {
     val sevenZFile = new SevenZFile(new File(path))

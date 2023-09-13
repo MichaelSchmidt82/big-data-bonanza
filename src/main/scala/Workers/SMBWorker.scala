@@ -1,5 +1,6 @@
 package Workers
 
+import Filetypes.Archive
 import com.hierynomus.smbj.SMBClient
 import com.hierynomus.smbj.auth.AuthenticationContext
 import com.hierynomus.smbj.share.DiskShare
@@ -27,4 +28,6 @@ object SMBWorker {
   for (f <- files) {
     println(f.getFileName)
   }
+
+  def upload(compressedFile: Archive):
 }
